@@ -2,9 +2,9 @@ class Price < ActiveRecord::Base
   attr_accessible :room_id, :qty, :price, :start_date, :end_date
   validate :start_date_end_date, :date_overlap
   validates_presence_of :room_id, :qty, :price, :start_date, :end_date
+  validates_start_date_end_date()
 
   belongs_to :room
-
   has_one :hotel, :through => :room, :source => :hotel
 
   def start_date_end_date

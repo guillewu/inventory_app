@@ -5,8 +5,8 @@ class Room < ActiveRecord::Base
   validates_uniqueness_of :hotel_id, :scope => :name
 
   belongs_to :hotel
-  has_many :prices
-  has_many :discounts
+  has_many :prices, :dependent => :destroy
+  has_many :discounts, :dependent => :destroy
 
   def calculate_price(search_start, search_end)
     total = 0

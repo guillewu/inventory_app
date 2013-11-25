@@ -3,9 +3,7 @@ class Hotel < ActiveRecord::Base
   validates_presence_of :name, :address
   validates_uniqueness_of :name
 
-  has_many :rooms
-
+  has_many :rooms, :dependent => :destroy
   has_many :discounts, :through => :rooms , :source => :discounts
-
   has_many :prices, :through => :rooms, :source => :prices
 end

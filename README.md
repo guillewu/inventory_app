@@ -1,6 +1,12 @@
 Simple inventory management for hotels (only data and object model).
 
-Things to look at: schema.rb, seeds.rb, and app/models
+Things to look at: schema.rb, seeds.rb, erd.pdf, and app/models
+
+To do:
+- Unit test
+- Simple interface to add hotels/prices/discounts
+- DRY price.rb and discount.rb
+- Refactor `Room#calculate_price`
 
 After cloning the repo and running `rake db:seed`, you can launch `rails c` and play around with it:
 ```
@@ -22,7 +28,3 @@ After cloning the repo and running `rake db:seed`, you can launch `rails c` and 
   Discount Load (0.1ms)  SELECT "discounts".* FROM "discounts" WHERE "discounts"."room_id" = 2 AND ((start_date <= '2013-11-26' AND end_date >= '2013-11-24'))
  => 4800.0 
 ```
-
-To do:
-- Unit test
-- Simple interface to add hotels/prices/discounts
