@@ -1,5 +1,4 @@
 class Discount < ActiveRecord::Base
-  include CustomValidation
   attr_accessible :room_id, :start_date, :end_date, :disc_rate, :los
   validate :start_date_end_date, :date_overlap
   validates_presence_of :room_id, :start_date, :end_date, :disc_rate, :los
