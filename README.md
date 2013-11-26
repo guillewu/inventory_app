@@ -1,9 +1,8 @@
 Simple inventory management for hotels (only data and object model).
 
-Things to look at: schema.rb, seeds.rb, erd.pdf, and app/models
+Things to look at: schema.rb, seeds.rb, erd.pdf, specs, and app/models
 
 To do:
-- Unit test
 - Simple interface to add hotels/prices/discounts
 - DRY price.rb and discount.rb
 - Refactor `Room#calculate_price`
